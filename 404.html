@@ -8,6 +8,6 @@
 // Ponte do endereço antigo: copia o progresso salvo neste navegador (moedas, visuais, baús, apelido…) e abre o endereço novo.
 (function(){var NOVO='https://afrodite-origins.github.io/',d={},i,k,v;
  try{for(i=0;i<localStorage.length;i++){k=localStorage.key(i);if(!/^afro/.test(k)||k==='afroTelSessions'||k==='afroTelQueue')continue;v=localStorage.getItem(k);if(v&&v.length<20000)d[k]=v}}catch(e){}
- var u=NOVO;try{if(Object.keys(d).length){u+='#migr='+btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}}catch(e){}
+ var rest=location.pathname.replace(/^\/afrodite-alpha\/?/,'').replace(/^index\.html$/,'');var u=NOVO+rest+location.search;try{if(Object.keys(d).length){u+='#migr='+btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}}catch(e){}
  document.getElementById('go').href=u;location.replace(u)})();
 </script></body></html>
