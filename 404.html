@@ -3,10 +3,10 @@
 <title>Afrodite Origins mudou de endereço</title>
 <meta name="robots" content="noindex">
 <style>html,body{margin:0;height:100%;background:#0b0a09;color:#e8dcc8;font:16px Georgia,serif;display:grid;place-items:center;text-align:center}a{color:#ffd27a}</style>
-</head><body><div><p>Afrodite Origins mudou de endereço.</p><p>Levando o seu progresso… <a id="go" href="https://afrodite-origins.github.io/">clique aqui se não abrir sozinho</a></p></div>
+</head><body><div><p>Afrodite Origins mudou de endereço.</p><p>Levando o seu progresso… <a id="go" href="https://afrodite-origins.github.io/afrodite-origins/">clique aqui se não abrir sozinho</a></p></div>
 <script>
 // Ponte do endereço antigo: copia o progresso salvo neste navegador (moedas, visuais, baús, apelido…) e abre o endereço novo.
-(function(){var NOVO='https://afrodite-origins.github.io/',d={},i,k,v;
+(function(){var NOVO='https://afrodite-origins.github.io/afrodite-origins/',d={},i,k,v;
  try{for(i=0;i<localStorage.length;i++){k=localStorage.key(i);if(!/^afro/.test(k)||k==='afroTelSessions'||k==='afroTelQueue')continue;v=localStorage.getItem(k);if(v&&v.length<20000)d[k]=v}}catch(e){}
  var rest=location.pathname.replace(/^\/afrodite-alpha\/?/,'').replace(/^index\.html$/,'');var u=NOVO+rest+location.search;try{if(Object.keys(d).length){u+='#migr='+btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}}catch(e){}
  document.getElementById('go').href=u;location.replace(u)})();
